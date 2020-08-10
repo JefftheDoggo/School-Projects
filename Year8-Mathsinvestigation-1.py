@@ -1,3 +1,25 @@
+import time
+yesno = ''
+print('Hello! I am Your Personal Camera Settings Calculator (PCSC)!')
+while yesno != 'no':
+ print("Choose lighting condition: Dusk(D), Sunset/Shade(S/S), Overcast(O), Cloudy(C), Lightly Cloudy(LC), Sunny(S), Snow/Sand(Sn/Sa), Default(De).")
+ time.sleep(0.5)
+ print('(No need to capitalize)')
+ time.sleep(0.5)
+ light = " "
+ settings = [["Dusk", "50", "1/4000s", "f/22"], ["Sunset/Shade", "100", "1/2000s", "f/16"], ["Overcast", "200", "1/1000s", "f/11"], ["Cloudy", "400", "1/500s", "f/8.0"], ["Lightly Cloudy", "800", "1/250s", "f/5.6"], ["Sunny", "1600", "1/125s", "f/4.0"], ["Snow/Sand", "3200", "1/60s", "f/2.8"], ["Default", "6400", "1/30s", "f/2.0"]]
+ dic = {"Dusk": 0, "Sunset/Shade": 1, "Overcast": 2, "Cloudy": 3, "Lightly Cloudy": 4, "Sunny": 5, "Snow/Sand": 6, "Default": 7, "D": 0, "S/S": 1, "O": 2, "C": 3, "LC": 4, "S": 5, "Sn/Sa": 6, "De": 7, "dusk": 0, "sunset/shade": 1, "overcast": 2, "cloudy": 3, "lightly cloudy": 4, "sunny": 5, "snow/sand": 6, "default": 7, "d": 0, "s/s": 1, "o": 2, "c": 3, "lc": 4, "s": 5, "sn/sa": 6, "de": 7}
+ while light != "Dusk" and light != "Sunset/Shade" and light != "Overcast" and light != "Cloudy" and light != "Lightly Cloudy" and light != "Sunny" and light != "Snow/Sand" and light != "Default" and light != "D" and light != "S/S" and light != "O" and light != "C" and light != "LC" and light != "S" and light != "Sn/Sa" and light != "De" and light != "dusk" and light != "sunset/shade" and light != "overcast" and light != "cloudy" and light != "lightly cloudy" and light != "sunny" and light != "snow/sand" and light != "default" and light != "d" and light != "s/s" and light != "o" and light != "c" and light != "lc" and light != "s" and light != "sn/sa" and light != "de":
+  light = input("What are the current lighting conditions? ")
+  time.sleep(1)#User inputs current light conditions
+  if light != "Dusk" and light != "Sunset/Shade" and light != "Overcast" and light != "Cloudy" and light != "Lightly Cloudy" and light != "Sunny" and light != "Snow/Sand" and light != "Default" and light != "D" and light != "S/S" and light != "O" and light != "C" and light != "LC" and light != "S" and light != "Sn/Sa" and light != "De" and light != "dusk" and light != "sunset/shade" and light != "overcast" and light != "cloudy" and light != "lightly cloudy" and light != "sunny" and light != "snow/sand" and light != "default" and light != "d" and light != "s/s" and light != "o" and light != "c" and light != "lc" and light != "s" and light != "sn/sa" and light != "de":
+   print("Oops! It seems your information was invalid. Please re-enter.")
+   time.sleep(0.5)
+ b = dic[light]
+ c = settings[b]
+ p = 0
+ j = c[0]
+ v = c[1]
  y = c[2]
  w = c[3]
  z = ' '
